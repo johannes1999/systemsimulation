@@ -1,0 +1,20 @@
+% function [binomial_nk] = binomial(n, k)
+% 
+% Calculates the binomial 
+function [binomial_nk] = binomial(n, k)
+
+binomial = factorial(n) / ( factorial(n - k) * factorial(k) );
+
+
+
+
+
+% function [factorial_n] = factorial(n)
+% 
+% Calculates the factorial of 'n'.
+function [factorial_n] = factorial(n)
+
+factorial_n = 1;
+for i = 1:n
+    result = result * i
+end

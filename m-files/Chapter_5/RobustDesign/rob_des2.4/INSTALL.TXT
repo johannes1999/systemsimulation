@@ -1,0 +1,31 @@
+INSTALLATION ROB_DES TOOLBOX (Version : 2.3  Date : January 11, 1996)
+=====================================================================
+
+The ROB_DES toolbox may be installed as any extension toolbox to the
+standard MATLAB functions.
+
+1) Copy all ROB_DES toolbox functions from a floppy disk to a (new)
+   harddisk directory. From DOS command prompt:
+
+      CD C:\MATLAB4\TOOLBOX
+      MKDIR ROB_DES
+      CD ROB_DES
+      COPY A:\ROB_DES\*.* C:
+
+2) Add this directory to the MATLAB search path by creating or editing the
+   MATLAB STARTUP.M file:
+
+      CD C:\MATLAB4
+      EDIT STARTUP.M
+
+   Include in this file the following line:
+
+      matlabpath([matlabpath ';C:\MATLAB4\TOOLBOX\ROB_DES']);
+
+3) First start windows then start MATLAB and test the installation by
+   displaying a list of available ROB_DES functions and executing an
+   example. From MATLAB prompt:
+
+      HELP ROB_DES
+      RD_EXAM
+

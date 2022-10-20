@@ -1,0 +1,6 @@
+% Switch
+clear all;
+close all;
+
+for i = 1:10
+    fo

@@ -1,0 +1,20 @@
+function [h, t] = ball_alt(v0, dt)
+% At t = 0 the ball is thrown up in the air with
+% starting velocity v0. This function calculates
+% the ball's trajectory h(t) until it hits the
+% ground again (h = 0). Points on the trajectory
+% are separated dt seconds in time.
+
+% Gravity [m/s^2]
+g = 9.81;  
+
+% Ball returns after.
+t_return = 2*v0/g;
+
+% This period constains number of samples.
+nr_samples = ceil(t_return/dt);
+
+% Calculate trajectory.
+t = linspace(0, t_return, nr_samples);
+h = v0*t - 0.5*g*(t.^2);
+
