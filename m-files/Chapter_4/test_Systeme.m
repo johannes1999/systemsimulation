@@ -23,7 +23,7 @@
 %--------------------------------------------------------------------------
 clearvars;
 close all;
-cd 'C:\Users\Horst\Documents\01_Vorlesungen\01_Studium Plus\07_System_Simulation\05_Matlab_work\Chapter_4';
+%cd 'C:\Users\Horst\Documents\01_Vorlesungen\01_Studium Plus\07_System_Simulation\05_Matlab_work\Chapter_4';
 %% Testwiederholungen
 N_tests=10; % Mit N_tests können Sie vorgeben wie oft eine System-function
             % mit der gleichen Testfunktion aufgerufen werden soll um zu 
@@ -34,11 +34,11 @@ N_tests=10; % Mit N_tests können Sie vorgeben wie oft eine System-function
 
 % Hier können Sie die Zeitdauer und die zeitliche Auflösung einstellen.
 
-tmax=1;          % max Zeitdauer     [s]
+tmax=5;          % max Zeitdauer     [s]
 dt=1e-3;         % Schrittweite      [s]
 t=0:dt:tmax;     % Zeitvektor        [s]
 
-Testfunktion=1; % Es stehen 3 Testfunktionen zur Verfügung, 
+Testfunktion=3; % Es stehen 3 Testfunktionen zur Verfügung, 
                 % deren Paramenter Sie ändern können: 
                 % 1: Sprungfunktion
                      A1=1; % Amplitude
@@ -47,7 +47,7 @@ Testfunktion=1; % Es stehen 3 Testfunktionen zur Verfügung,
                     f2=4; % Frequenz    [Hz]
                 % 3: Rechteck-Funktion
                     A3=1; % Amplitude
-                    f3=4; % Frequenz    [Hz]
+                    f3=.5; % Frequenz    [Hz]
 
 %% Auswahl des zu testenden Systems   
 % Unter den 4 Systemen befinden sich auch zeitvariante Systeme. 

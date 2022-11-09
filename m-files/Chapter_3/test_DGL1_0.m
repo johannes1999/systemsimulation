@@ -26,10 +26,10 @@ Tau=R*C;    % Zeitkonstante [s]
 
 %% Störfunktion
 Uo=5;      % Versorgungsspannung   [V]
-w=2*pi/0.1; % Kreisfrequenz        [1/s]
+w=0*pi/0.1; % Kreisfrequenz        [1/s]
 
 %% Anfangswert
-uc0=8;      % Spannung am Kondensator zum Zeitpunkt t=0
+uc0=0;      % Spannung am Kondensator zum Zeitpunkt t=0
 
 %% Zeitbereich 
 dt=Tau/100;
@@ -41,13 +41,13 @@ n=length(t);   % Anzahl Werte
 uc=zeros(1,n);  % initialisieren 
 uc(1)=uc0;      % Anfangswert
   for i=2:n
-      uc(i)=uc(i-1)+(-uc(i-1)/Tau+Uo/Tau*sin(w*t(i-1)))*dt;  
+      uc(i)=uc(i-1)+(-uc(i-1)/Tau+Uo/Tau*cos(w*t(i-1)))*dt;  
   end
  
 %% Ausgabe
 %---------
 figure
-    plot(t,uc,'b',t,Uo*sin(w*t),'g')
+    plot(t,uc,'b',t,Uo*cos(w*t),'g')
     xlabel(' t[s]')
     ylabel('u_C [V]')
     grid
