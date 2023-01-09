@@ -37,7 +37,7 @@ y3=sin(t.*w1+0.3*cos(5*w1*t));              % Phasenmodulation
 % werden.
 
 % Wie berechnet sich die Frequenz-Achse für das Spektrum?
-f_spektrum=...;  % Frequenzachse für das Frequenzspektrum    [Hz]
+f_spektrum=1/T*(1:N);  % Frequenzachse für das Frequenzspektrum    [Hz]
 
 % Hier soll der Aufruf für die Berechnung für die DFT eingefügt werden
 % 
@@ -47,8 +47,16 @@ f_spektrum=...;  % Frequenzachse für das Frequenzspektrum    [Hz]
 
 y=y1; % Auswahl der Funktion von Hand y=...
 
-F=...;    % Spektrum der Funktion y in einem Schritt DFT_1(y)
-    
+F=DFT_1(y);    % Spektrum der Funktion y in einem Schritt DFT_1(y)
+
+algorythmus = 2;
+switch algorythmus
+    case 1
+        F=DFT_1(y);    % Spektrum der Funktion y in einem Schritt DFT_1(y)    
+    case 2
+        F=fft(y);
+end
+
    
      figure; 
      subplot(2,1,1)
@@ -60,6 +68,13 @@ F=...;    % Spektrum der Funktion y in einem Schritt DFT_1(y)
     
 % Hier soll die Berechnung der Diskreten Fourier Transformation eingefügt
 % werden
-function ...=DFT_1(y)
-
+function A=DFT_1(y)
+    N=length(y);        % Länge des Wertevektors
+    A=zeros(1,N);       % komplexe Werte der DFT
+    
+    for n=1:N           % Schleife über alle Frequenzen
+        for m=1:N       % Schleife über alle Mess-Werte
+            A(n)=A(n)+y(m)*exp(-1i*2*pi/N*(n-1)*(m-1));
+        end
+    end
 end

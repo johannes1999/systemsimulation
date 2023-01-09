@@ -1,0 +1,13 @@
+1) Diagramm.png
+2) vonHand.png
+3) test_wolfram.m & wolfram_fun & wolfram.png
+4) 1. f besitzt sensitive Abhängigkeit von den Anfangsbedingungen auf Y Y:
+	- Bei einem MCU werden innerhalb eines sehr kuzen Abstandes z.B. eine nano Sekunde zwei Zufallszahlen generiert.
+	  Betrachtet man den Generator als Blackbox und denkt sich, dass die Umgebungsbedingungen, wie Temperatur, Beschleunigung, Zeit und
+	  Magnetfeld sich kaum geändert haben können, ist die Zahl eine völlig andere.
+	- PID parameter werden für eine Motorsteuerung eingestellt und eine minimale Veränderung des
+	  Integralteils führt entweder zum perfekten Ergebnis oder zu einem massiven Überschwingen
+	- Ein Zeitreisender taucht in der Vergangenheit auf und verliebt sich in eine französische Frau. Diese bekommt,
+	  in dieser Zeitachse kein Kind. Dieses kann sich demnach nicht in der französischen Revolution beteiligen. Die Revolution scheitert...
+	
+
